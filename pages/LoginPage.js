@@ -6,12 +6,13 @@ import {styles} from '../components/Styles.js'
 function LoginPage( {navigation} ) { //Needs forgot password and email verification
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
+    var loggedIn = false;
     
     //This would be separate on the web app but im keeping it here for now to reuse the consts
-    const doLogin = async (event) => { //this shit dont work, fix tonight
+    function doLogin () { //this shit dont work, fix tonight
       const lowerCaseUsername = name.toLowerCase();
   
-      const response = fetch('/api/login', {
+      /*const response = fetch('/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,6 +26,8 @@ function LoginPage( {navigation} ) { //Needs forgot password and email verificat
       if(response.ok){
         navigation.navigate('Home');
       }
+      */
+      navigation.navigate('Home');
       
     }
   
@@ -47,9 +50,7 @@ function LoginPage( {navigation} ) { //Needs forgot password and email verificat
   
         <Button
           title="Login"
-          //onPress={() => { this.doLogin }}
-          onPress={() => navigation.navigate('Home')} //This should send you to a login function that redirects IF valid
-        
+          onPress={() => {doLogin()}} //This should send you to a login function that redirects IF valid
         />
   
         <Button
