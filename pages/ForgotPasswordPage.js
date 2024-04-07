@@ -7,6 +7,11 @@ function ForgotPasswordPage( {navigation} ) {
     return(
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>Forgot Password</Text>
+
+        <Button
+          title="Email Verification"
+          onPress={() => navigation.navigate('Email')}
+        />
       </View>
   
     );

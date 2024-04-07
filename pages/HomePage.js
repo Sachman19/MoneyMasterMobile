@@ -7,6 +7,17 @@ function HomePage( {navigation} ) { //This is going to become our dashboard
     return(
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>Home Page</Text>
+
+        <Button
+          title="Accounts"
+          onPress={() => navigation.navigate('Account')}
+        />
+
+        <Button
+          title="Transfer Money"
+          onPress={() => navigation.navigate('Transfer')}
+        /> 
+
       </View>
   
     );

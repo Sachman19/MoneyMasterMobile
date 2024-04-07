@@ -7,6 +7,11 @@ function EmailVerification( {navigation} ) {
     return(
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>Email Verification Page</Text>
+
+        <Button
+          title="Home"
+          onPress={() => navigation.navigate('Home')}
+        />
       </View>
   
     );

@@ -7,7 +7,8 @@ function LoginPage( {navigation} ) { //Needs forgot password and email verificat
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     
-    const doLogin = async (event) => { //This would be separate on the web app but im keeping it here for now to reuse the consts
+    //This would be separate on the web app but im keeping it here for now to reuse the consts
+    const doLogin = async (event) => { //this shit dont work, fix tonight
       const lowerCaseUsername = name.toLowerCase();
   
       const response = fetch('/api/login', {
@@ -55,6 +56,11 @@ function LoginPage( {navigation} ) { //Needs forgot password and email verificat
           title="Register"
           onPress={() => navigation.navigate('Register')}
         />
+
+        <Button
+          title="Forgot Password?"
+          onPress={() => navigation.navigate('ForgotPassword')}
+        /> 
   
       </View>
   

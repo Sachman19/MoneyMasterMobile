@@ -12,7 +12,8 @@ function RegisterPage( {navigation} ) {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
   
-    const doRegister = async (event) => { //This would be separate on the web app but im keeping it here for now to reuse the consts
+    //This would be separate on the web app but im keeping it here for now to reuse the consts
+    const doRegister = async (event) => { //This whole thing doesnt work, i just needed some bs to show the ta temporarily
       event.preventDefault();
   
       const lowerCaseUsername = username.toLowerCase();
@@ -85,7 +86,7 @@ function RegisterPage( {navigation} ) {
   
         <Button
           title="Submit"
-          onPress={() => navigation.navigate('Home')} //This is temporary while i figure out HOW to do this
+          onPress={() => navigation.navigate('Email')} //This is temporary while i figure out HOW to do this
         />
       </View>
   
