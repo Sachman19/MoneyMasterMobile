@@ -3,7 +3,7 @@ import React, {useState} from "react"
 
 import {styles} from '../components/Styles.js'
 
-function HomePage( {navigation} ) {
+function HomePage( {navigation} ) { //This is going to become our dashboard
     return(
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>Home Page</Text>

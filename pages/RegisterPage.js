@@ -12,7 +12,7 @@ function RegisterPage( {navigation} ) {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
   
-    const doRegister = async (event) => {
+    const doRegister = async (event) => { //This would be separate on the web app but im keeping it here for now to reuse the consts
       event.preventDefault();
   
       const lowerCaseUsername = username.toLowerCase();
@@ -85,7 +85,7 @@ function RegisterPage( {navigation} ) {
   
         <Button
           title="Submit"
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Home')} //This is temporary while i figure out HOW to do this
         />
       </View>
   
